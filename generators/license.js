@@ -1,6 +1,6 @@
 // ==========================================================================
-// Project:  Ember Data
-// Copyright: ©2011 Living Social Inc. and contributors.
+// Project:   Ember group helper
+// Copyright: ©2012 Erik Bryn and contributors
 // License:   Licensed under MIT license (see license.js)
 // ==========================================================================
 
