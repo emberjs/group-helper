@@ -8,7 +8,7 @@ Currently requires Ember.js master.
 
 ## Usage
 
-```javascript
+```handlebars
   {{#group}}
     {{firstName}} {{lastName}}
   {{/group}}
@@ -16,7 +16,7 @@ Currently requires Ember.js master.
 
 Changes to `firstName` or `lastName` will rerender the whole `group` block.
 
-```javascript
+```handlebars
   {{#group}}
     {{#each people}}
       {{firstName}} {{lastName}}
@@ -26,7 +26,7 @@ Changes to `firstName` or `lastName` will rerender the whole `group` block.
 
 The whole `group` block will be rerendered upon a change to the `people` array or any property within it.
 
-```javascript
+```handlebars
   {{#group}}
     {{#each people groupedRows=true}}
       {{firstName}} {{lastName}}
@@ -36,7 +36,7 @@ The whole `group` block will be rerendered upon a change to the `people` array o
 
 Specifying the `groupedRows` property will cause the #each to behave more like a normal bound #each. Since each row will have a virtual view associated with it, when a property within a row changes it will rerender only that row.
 
-```javascript
+```handlebars
   {{#group}}
     {{#each people itemViewClass="App.RowView"}}
       {{firstName}} {{lastName}}
