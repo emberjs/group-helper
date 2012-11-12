@@ -1,8 +1,8 @@
 # Ember.js group helper
 
-This is an experimental plugin to allow an application developer to change the granularity of bindings in a template. This can lead to significant performance improvements when outputting many of bound properties, inside of an #each for example.
+This is an experimental plugin to allow an application developer to change the granularity of bindings in a template. This can lead to significant performance improvements when outputting many bound properties, inside of an #each for example.
 
-The general rule is that the `group` helper causes the nearest view to be rerendered when a property inside it changes.
+The general rule is that the `group` helper causes the nearest view to be rerendered when a property inside it changes. It also prevents the common Handlebars helpers (#if, #unless, #each) from creating virtual views.
 
 Currently requires Ember.js master.
 
