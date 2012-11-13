@@ -24,7 +24,7 @@ Changes to `firstName` or `lastName` will rerender the whole `group` block.
   {{/group}}
 ```
 
-The whole `group` block will be rerendered upon a change to the `people` array or any property within it.
+The whole `group` block will be rerendered upon addition/removal of elements in the `people` array or any properties output within the `each` block.
 
 ```handlebars
   {{#group}}
@@ -34,7 +34,7 @@ The whole `group` block will be rerendered upon a change to the `people` array o
   {{/group}}
 ```
 
-Specifying the `groupedRows` property will cause the #each to behave more like a normal bound #each. Since each row will have a virtual view associated with it, when a property within a row changes it will rerender only that row.
+Specifying the `groupedRows` option will cause the `#each` to behave like a normal bound `#each`. There will be a virtual view for the `each` itself and for every row. Addition/removal of elements in the array will insert/remove rows in the DOM without causing the `group` to rerender. Since each row has a virtual view, changing a property output inside a row will only rerender that row.
 
 ```handlebars
   {{#group}}
@@ -44,5 +44,5 @@ Specifying the `groupedRows` property will cause the #each to behave more like a
   {{/group}}
 ```
 
-You can alternatively specify an `itemViewClass` to get the normal bound #each behavior as detailed above.
+You can alternatively specify an `itemViewClass` to get the behavior as detailed above, but instead of rows being virtual views, they'll be instances of your specified class.
 
