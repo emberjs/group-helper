@@ -35,9 +35,9 @@ task :strip_whitespace do
   end
 end
 
-desc "Build ember-data.js"
+desc "Build group-helper.js"
 task :dist do
-  puts "Building Ember Data..."
+  puts "Building Ember.js Group Helper..."
   pipeline.invoke
   puts "Done"
 end
